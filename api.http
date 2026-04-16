@@ -1,0 +1,86 @@
+POST http://localhost:3000/api/auth/register HTTP/1.1
+content-type: application/json
+
+# {
+#     "username": "LegendX",
+#     "password": "123123",
+#     "email": "LegendX@gmail.com",
+#     "name": "legend"
+# }
+{
+    "name": "rahul vishwakarma",
+    "password": "test123",
+    "email": "fakerahul9236@gmail.com"
+}
+
+
+
+###
+POST http://localhost:9080/login HTTP/1.1
+content-type: application/json
+
+{
+    "password": "123123",
+    "email": "LegendX1@gmail.com"
+}
+
+
+
+###
+GET http://localhost:3000/api/auth/check
+# Content-Type: application/json
+
+
+
+
+
+###
+POST http://localhost:9080/update_profile_data HTTP/1.1
+content-type: application/json
+
+{
+    "token": "55d118d186c496c081b10a94bb3a24f588c28a6ad67436dab22f03cfb5ee0a9d",
+    "bio": "I Love coding.",
+    "currentPost": "Developer",
+    "pastWork": [
+        {
+            "company": "Microsoft",
+            "position": "Developer",
+            "years": "2+"
+        }
+    ],
+    "education": [
+        {
+            "school": "IIIT",
+            "degree": "B.Tech",
+            "fieldOfStudy": "2015-2019"
+        }
+    ]
+}
+
+
+
+
+
+###
+
+GET http://localhost:9080/get_user_and_profile
+Content-Type: application/json
+
+{
+    "token": "39061699463b20565cbe1b84720c5727595da60d4cf401c214bdb7995a3cf92d"
+}
+
+
+
+
+###
+GET http://localhost:9080/user/get_all_users
+content-type: application/json
+
+
+
+
+###
+GET http://localhost:9080/user/download_profile?id=689486d329c2d2d984ff02b8
+content-type: application/json
